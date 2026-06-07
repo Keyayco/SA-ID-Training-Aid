@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SA Document Verification</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>SA Document Verification</h1>
+    <h4> Training Aid – Draft Version</h4>
+</header>
+
+<!-- TOP NAV -->
+<nav class="top-tabs">
+    <button class="top-tab active" data-tab="overview">Overview</button>
+    <button class="top-tab" data-tab="smart-id">Smart ID</button>
+    <button class="top-tab" data-tab="green-id">Green ID</button>
+    <button class="top-tab" data-tab="passport">Passport</button>
+    <button class="top-tab" data-tab="temp-id">Temp ID</button>
+    <button class="top-tab fraud-tab" data-tab="fraud">Fraud Methods</button>
+    <button class="top-tab detection-tab" data-tab="detection">Detection</button>
+    <button class="top-tab response-tab" data-tab="response">Response</button>
+    <button class="top-tab upload-tab" data-tab="upload-guide">Upload Guide</button>
+</nav>
+
+<!-- OVERVIEW -->
+<section id="overview" class="top-section active">
+    <h2>Overview</h2>
+    <p>Select a document type to begin verification training.</p>
+
+    <div class="card-container">
+
+        <div class="card" data-target="smart-id">
+           <h3>🪪 Smart ID</h3>
+            <p>Modern biometric ID card with chip and advanced security features.</p>
+        </div>
+
+        <div class="card" data-target="green-id">
+            <h3>📗 Green ID Book</h3>
+            <p>Traditional ID document with barcode and laminated photo.</p>
+        </div>
+
+        <div class="card" data-target="passport">
+            <h3>🛂 Passport</h3>
+            <p>Travel document with laser engraving and MRZ validation.</p>
+        </div>
+
+        <div class="card" data-target="temp-id">
+            <h3>📄 Temporary ID</h3>
+            <p>Paper-based certificate with limited validity and higher risk.</p>
+        </div>
+
+        <div class="card" data-target="fraud">
+            <h3>⚠️ Fraud Methods</h3>
+            <p>Learn how documents are manipulated and forged.</p>
+        </div>
+
+        <div class="card" data-target="detection">
+            <h3>🔍 Detection Techniques</h3>
+            <p>Step-by-step methods to identify fraudulent documents.</p>
+        </div>
+
+        <div class="card upload-card" data-target="upload-guide">
+            <h3>📤 Upload Guide</h3>
+            <p>What clerks must check before accepting ID and selfie uploads for applications.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SMART ID -->
+<section id="smart-id" class="top-section">
+
+<nav class="sub-tabs">
+    <button class="sub-tab active" data-tab="smart-auth">Authentic</button>
+    <button class="sub-tab" data-tab="smart-fake">Fake</button>
+    <button class="sub-tab" data-tab="smart-damaged">Damaged</button>
+    <button class="sub-tab" data-tab="smart-red">Red Flags</button>
+    <button class="sub-tab" data-tab="smart-verify">Verification</button>
+</nav>
+
+<div id="smart-auth" class="sub-section active">
+    <h2>Authentic Smart ID</h2>
+    
+   <div class="image-row">
+    <div class="image-block">
+        <h4>Front (Authentic)</h4>
+        <img src="images/smart-auth-front.jpg">
+    </div>
+    <div class="image-block">
+        <h4>Back (Authentic)</h4>
+        <img src="images/smart-auth-back.jpg">
+    </div>
+</div>
+    
+    <h3>Authentic Features</h3>
+    <ul>
+        <li><strong>Color:</strong> Blue and white design</li>
+        <li><strong>Material:</strong> Polycarbonate plastic</li>
+        <li><strong>Chip:</strong> Visible gold-colored chip</li>
+        <li><strong>Hologram:</strong> 3D holographic element</li>
+        <li><strong>Microprinting:</strong> Tiny text (magnification needed)</li>
+        <li><strong>UV Features:</strong> Visible under UV light</li>
+        <li><strong>Watermark:</strong> Faint background watermark</li>
+    </ul>
+</div>
+
+<div id="smart-fake" class="sub-section">
+    <h2>Fake Smart ID</h2>
+    <img src="images/smart-fake.jpg">
+    <h3>Common Fake Methods</h3>
+    <ul>
+        <li>Chip cloning</li>
+        <li>Photo replacement</li>
+        <li>Data manipulation</li>
+        <li>Poor printing</li>
+        <li>Missing holograms</li>
+        <li>Chip issues</li>
+    </ul>
+    <h3>Common Indicators</h3>
+    <p>
+        Misaligned or non-functional chips, poor printing, missing or blurry holograms,
+        incorrect color gradients, and low-quality photographs.
+    </p>
+</div>
+
+<div id="smart-damaged" class="sub-section">
+    <h2>Damaged Smart ID</h2>
+    <img src="images/smart-damaged.jpg" alt="Damaged Smart ID">
+    <h3>Common Damage Types</h3>
+    <ul>
+        <li>Cracked or broken card</li>
+        <li>Worn-out chip</li>
+        <li>Faded or scratched surface</li>
+        <li>Peeling layers (delamination)</li>
+        <li>Water or heat damage</li>
+    </ul>
+    <h3>Risk Indicators</h3>
+    <ul>
+        <li>⚠️ Chip not readable</li>
+        <li>⚠️ Photo unclear or distorted</li>
+        <li>⚠️ Missing security features</li>
+        <li>⚠️ Data partially unreadable</li>
+    </ul>
+    <p><strong>Important:</strong> A damaged ID is not automatically fraudulent, but must be verified with extra caution.</p>
+</div>
+
+<div id="smart-red" class="sub-section">
+    <h2>Red Flags</h2>
+    <img src="images/smart-red.jpg">
+    <ul>
+        <li>🚩 Misaligned or damaged chip</li>
+        <li>🚩 Poor color reproduction</li>
+        <li>🚩 Missing 3D hologram</li>
+        <li>🚩 Scratches or damage</li>
+        <li>🚩 Incorrect font or spacing</li>
+        <li>🚩 Faded information</li>
+        <li>🚩 Chip not responding</li>
+        <li>🚩 Altered or pasted photo</li>
+    </ul>
+</div>
+
+<div id="smart-verify" class="sub-section">
+    <h2>Verification Procedure</h2>
+    <h3>Step 1: Visual Inspection</h3>
+    <ul>
+        <li>Check overall appearance</li>
+        <li>Look for holograms and watermarks</li>
+        <li>Verify text clarity</li>
+        <li>Check photo quality</li>
+    </ul>
+    <h3>Step 2: Physical Examination</h3>
+    <ul>
+        <li>Feel material texture</li>
+        <li>Check for tampering</li>
+        <li>Inspect edges</li>
+        <li>Look for raised elements</li>
+    </ul>
+    <h3>Step 3: Electronic Verification</h3>
+    <ul>
+        <li>Test chip functionality</li>
+        <li>Scan barcode</li>
+        <li>Match stored data</li>
+        <li>Check encryption</li>
+    </ul>
+    <h3>Step 4: Information Verification</h3>
+    <ul>
+        <li>Cross-check databases</li>
+        <li>Verify ID format</li>
+        <li>Check validity dates</li>
+        <li>Confirm personal info</li>
+    </ul>
+</div>
+
+</section>
+
+<!-- GREEN ID -->
+<section id="green-id" class="top-section">
+
+<nav class="sub-tabs">
+    <button class="sub-tab active" data-tab="green-auth">Authentic</button>
+    <button class="sub-tab" data-tab="green-fake">Fake</button>
+    <button class="sub-tab" data-tab="green-damaged">Damaged</button>
+    <button class="sub-tab" data-tab="green-red">Red Flags</button>
+    <button class="sub-tab" data-tab="green-verify">Verification</button>
+</nav>
+
+<div id="green-auth" class="sub-section active">
+    <h2>Authentic Green ID Book</h2>
+    <img src="images/green-auth.jpg">
+    <h3>Key Features to Verify</h3>
+    <ul>
+        <li><strong>Barcode:</strong> Must match printed ID number</li>
+        <li><strong>Lamination:</strong> High-quality, clear and firmly sealed</li>
+        <li><strong>Watermarks:</strong> SA coat of arms visible under light</li>
+        <li><strong>Font:</strong> Consistent spacing and alignment</li>
+        <li><strong>Photo:</strong> Clear and properly embedded</li>
+    </ul>
+</div>
+
+<div id="green-fake" class="sub-section">
+    <h2>Fake Green ID Book</h2>
+    <img src="images/green-fake.jpg">
+    <h3>Common Fake Methods</h3>
+    <ul>
+        <li>Photo substitution</li>
+        <li>Information alteration (name, DOB, ID number)</li>
+        <li>Cloned documents using stolen data</li>
+        <li>Low-quality materials replacing original lamination</li>
+        <li>Missing or poorly replicated security features</li>
+    </ul>
+    <h3>Common Manipulations</h3>
+    <p>
+        Altered dates, replaced photos, mismatched ID numbers,
+        and inconsistent document details are typical fraud indicators.
+    </p>
+</div>
+
+<div id="green-damaged" class="sub-section">
+    <h2>Damaged Green ID Book</h2>
+    <img src="images/green-damaged.jpg" alt="Damaged Green ID Book">
+    <h3>Common Damage Types</h3>
+    <ul>
+        <li>Torn or frayed pages</li>
+        <li>Peeling or bubbled lamination</li>
+        <li>Water-stained or discolored pages</li>
+        <li>Faded photo or text</li>
+        <li>Bent spine or loose binding</li>
+        <li>Barcode worn or unreadable</li>
+    </ul>
+    <h3>Risk Indicators</h3>
+    <ul>
+        <li>⚠️ Barcode cannot be scanned</li>
+        <li>⚠️ Photo is obscured or partially missing</li>
+        <li>⚠️ ID number partially illegible</li>
+        <li>⚠️ Lamination peeling around photo area (possible tampering)</li>
+        <li>⚠️ Watermarks no longer visible</li>
+    </ul>
+    <p><strong>Important:</strong> Peeling lamination around the photo is a key fraud indicator — escalate immediately. General wear is not automatically fraudulent but requires closer inspection.</p>
+</div>
+
+<div id="green-red" class="sub-section">
+    <h2>Red Flags</h2>
+    <img src="images/green-red.jpg">
+    <ul>
+        <li>🚩 Barcode does not match ID number</li>
+        <li>🚩 Peeling or cloudy lamination</li>
+        <li>🚩 Missing or unclear watermarks</li>
+        <li>🚩 Inconsistent font or spacing</li>
+        <li>🚩 Tampered edges or glued photo</li>
+        <li>🚩 Blurry or low-quality image</li>
+    </ul>
+</div>
+
+<div id="green-verify" class="sub-section">
+    <h2>Verification Procedure</h2>
+    <h3>Step 1: Visual Inspection</h3>
+    <ul>
+        <li>Check color, layout, and print quality</li>
+        <li>Inspect lamination and photo placement</li>
+        <li>Look for watermarks under light</li>
+    </ul>
+    <h3>Step 2: Barcode Verification</h3>
+    <ul>
+        <li>Scan barcode using a reader or mobile app</li>
+        <li>Ensure barcode data matches printed ID number</li>
+    </ul>
+    <h3>Step 3: Cross-Verification</h3>
+    <ul>
+        <li>Compare with other documents (passport, license)</li>
+        <li>Check for mismatched personal details</li>
+    </ul>
+    <h3>Step 4: Official Verification</h3>
+    <ul>
+        <li>Verify with Department of Home Affairs (DHA)</li>
+        <li>Use online services or contact DHA</li>
+    </ul>
+    <h3>Step 5: Advanced Checks</h3>
+    <ul>
+        <li>Use UV light or magnification tools</li>
+        <li>Check for hidden security features</li>
+    </ul>
+    <p><strong>Note:</strong> If fraud is suspected, report to SAPS or DHA.</p>
+</div>
+
+</section>
+
+<!-- PASSPORT -->
+<section id="passport" class="top-section">
+
+<nav class="sub-tabs">
+    <button class="sub-tab active" data-tab="pass-auth">Authentic</button>
+    <button class="sub-tab" data-tab="pass-fake">Fake</button>
+    <button class="sub-tab" data-tab="pass-damaged">Damaged</button>
+    <button class="sub-tab" data-tab="pass-red">Red Flags</button>
+    <button class="sub-tab" data-tab="pass-verify">Verification</button>
+</nav>
+
+<div id="pass-auth" class="sub-section active">
+    <h2>Authentic South African Passport</h2>
+    <img src="images/pass-auth.jpg">
+    <h3>Data Page Features</h3>
+    <ul>
+        <li><strong>Material:</strong> Polycarbonate data page</li>
+        <li><strong>Laser Engraving:</strong> Photo and text embedded (not printed)</li>
+        <li><strong>OVI Ink:</strong> "RSA" changes color when tilted</li>
+        <li><strong>Latent Image:</strong> Hidden RSA appears at angle</li>
+        <li><strong>Tactile Print:</strong> Raised intaglio texture</li>
+    </ul>
+    <h3>Physical Construction</h3>
+    <ul>
+        <li>Laser-perforated passport number on pages</li>
+        <li>Ghost image on final visa page</li>
+        <li>White stitching (glows under UV)</li>
+        <li>Chemically sensitized paper</li>
+    </ul>
+    <h3>MRZ (Machine Readable Zone)</h3>
+    <ul>
+        <li>Starts with <strong>P&lt;ZAF</strong></li>
+        <li>Contains encoded personal data</li>
+        <li>Includes check digits for validation</li>
+    </ul>
+</div>
+
+<div id="pass-fake" class="sub-section">
+    <h2>Fake Passport Methods</h2>
+    <img src="images/pass-fake.jpg">
+    <h3>Common Fraud Techniques</h3>
+    <ul>
+        <li>Photo substitution or page replacement</li>
+        <li>Fake laminate or printed data pages</li>
+        <li>MRZ manipulation without valid check digits</li>
+        <li>Forged stamps or visas</li>
+        <li>Missing laser engraving</li>
+    </ul>
+    <h3>Advanced Fraud</h3>
+    <ul>
+        <li>Cloned passport data</li>
+        <li>Fake perforation patterns</li>
+        <li>Imitated UV features</li>
+    </ul>
+</div>
+
+<div id="pass-damaged" class="sub-section">
+    <h2>Damaged Passport</h2>
+    <img src="images/pass-damaged.jpg" alt="Damaged Passport">
+    <h3>Common Damage Types</h3>
+    <ul>
+        <li>Water damage — swollen, warped, or stained pages</li>
+        <li>Torn or detached pages</li>
+        <li>Worn or faded data page</li>
+        <li>Bent spine or broken binding</li>
+        <li>MRZ scratched or partially unreadable</li>
+        <li>Photo area faded or discolored</li>
+    </ul>
+    <h3>Risk Indicators</h3>
+    <ul>
+        <li>⚠️ MRZ cannot be scanned or read</li>
+        <li>⚠️ Data page shows signs of delamination</li>
+        <li>⚠️ Photo is unclear or distorted</li>
+        <li>⚠️ OVI ink color shift cannot be verified</li>
+        <li>⚠️ Perforated passport number missing or damaged</li>
+    </ul>
+    <p><strong>Important:</strong> Even a damaged passport must retain readable MRZ and a recognisable photo for verification. Delamination on the data page is a serious fraud flag — escalate immediately.</p>
+</div>
+
+<div id="pass-red" class="sub-section">
+    <h2>Red Flags</h2>
+    <img src="images/pass-red.jpg">
+    <ul>
+        <li>🚩 Printed (not engraved) photo or text</li>
+        <li>🚩 No color shift in OVI ink</li>
+        <li>🚩 Missing or incorrect MRZ format</li>
+        <li>🚩 MRZ does not match visible data</li>
+        <li>🚩 No perforated passport number</li>
+        <li>🚩 Loose or damaged stitching</li>
+        <li>🚩 Poor-quality paper or printing</li>
+        <li>🚩 Fake or inconsistent stamps</li>
+    </ul>
+</div>
+
+<div id="pass-verify" class="sub-section">
+    <h2>Verification Procedure</h2>
+    <h3>Step 1: Visual Inspection</h3>
+    <ul>
+        <li>Check data page material and engraving</li>
+        <li>Look for OVI color shift</li>
+        <li>Inspect photo and text clarity</li>
+    </ul>
+    <h3>Step 2: MRZ Verification</h3>
+    <ul>
+        <li>Check format (P&lt;ZAF)</li>
+        <li>Scan MRZ using reader</li>
+        <li>Validate check digits</li>
+    </ul>
+    <h3>Step 3: Physical Inspection</h3>
+    <ul>
+        <li>Check stitching and binding</li>
+        <li>Inspect perforations</li>
+        <li>Use UV light for hidden features</li>
+    </ul>
+    <h3>Step 4: Database Verification</h3>
+    <ul>
+        <li>Verify via Department of Home Affairs</li>
+        <li>Use authorized services (VerifyNow, MIE)</li>
+        <li>Cross-check identity details</li>
+    </ul>
+    <h3>Step 5: Biometric / Advanced</h3>
+    <ul>
+        <li>Perform face matching (if available)</li>
+        <li>Check against national databases</li>
+    </ul>
+    <p><strong>Note:</strong> Report suspected fraud to authorities.</p>
+</div>
+
+</section>
+
+<!-- TEMP ID -->
+<section id="temp-id" class="top-section">
+
+<nav class="sub-tabs">
+    <button class="sub-tab active" data-tab="temp-auth">Authentic</button>
+    <button class="sub-tab" data-tab="temp-fake">Fake</button>
+    <button class="sub-tab" data-tab="temp-damaged">Damaged</button>
+    <button class="sub-tab" data-tab="temp-red">Red Flags</button>
+    <button class="sub-tab" data-tab="temp-verify">Verification</button>
+</nav>
+
+<div id="temp-auth" class="sub-section active">
+    <h2>Temporary Identity Certificate (TIC)</h2>
+    <img src="images/temp-auth.jpg">
+    <h3>Official Features</h3>
+    <ul>
+        <li><strong>Document Type:</strong> A4 paper certificate</li>
+        <li><strong>DHA Stamp:</strong> Original wet-ink stamp</li>
+        <li><strong>Photographs:</strong> Two identical colour photos</li>
+        <li><strong>Signature:</strong> Issuing officer must sign</li>
+        <li><strong>ID Number:</strong> Standard 13-digit SA format</li>
+    </ul>
+</div>
+
+<div id="temp-fake" class="sub-section">
+    <h2>Fake Temporary ID Methods</h2>
+    <img src="images/temp-fake.jpg">
+    <h3>Common Fraud Techniques</h3>
+    <ul>
+        <li>Photocopied or fake DHA stamp</li>
+        <li>Photo replacement (glued or lifted)</li>
+        <li>Forged signature</li>
+        <li>Expired document reused</li>
+        <li>Fake or invalid ID number</li>
+    </ul>
+</div>
+
+<div id="temp-damaged" class="sub-section">
+    <h2>Damaged Temporary ID Certificate</h2>
+    <img src="images/temp-damaged.jpg" alt="Damaged Temporary ID">
+    <h3>Common Damage Types</h3>
+    <ul>
+        <li>Torn, folded, or crumpled paper</li>
+        <li>Water-stained or faded text</li>
+        <li>Smudged ink on stamp or signature</li>
+        <li>Detached or missing photo</li>
+        <li>Illegible ID number due to wear</li>
+    </ul>
+    <h3>Risk Indicators</h3>
+    <ul>
+        <li>⚠️ DHA stamp unreadable or partially missing</li>
+        <li>⚠️ Signature absent or smeared beyond recognition</li>
+        <li>⚠️ Photo loose or clearly re-attached</li>
+        <li>⚠️ Key fields (ID number, name, DOB) illegible</li>
+        <li>⚠️ Expiry date unreadable</li>
+    </ul>
+    <p><strong>Important:</strong> TICs are already high-risk documents. Any damage that obscures the stamp, signature, photo, or ID number must result in immediate escalation. Do not accept a damaged TIC without supervisor approval.</p>
+</div>
+
+<div id="temp-red" class="sub-section">
+    <h2>Red Flags</h2>
+    <img src="images/temp-red.jpg">
+    <ul>
+        <li>🚩 Missing or copied DHA stamp</li>
+        <li>🚩 Expired certificate</li>
+        <li>🚩 Photo lifting or glue marks</li>
+        <li>🚩 No issuing officer signature</li>
+        <li>🚩 Incorrect ID number format</li>
+        <li>🚩 Barcode mismatch (if present)</li>
+        <li>🚩 Damaged or altered paper</li>
+    </ul>
+</div>
+
+<div id="temp-verify" class="sub-section">
+    <h2>Verification Procedure</h2>
+    <h3>Step 1: Visual Inspection</h3>
+    <ul>
+        <li>Check stamp authenticity (wet ink)</li>
+        <li>Inspect photo attachment</li>
+        <li>Confirm signature present</li>
+    </ul>
+    <h3>Step 2: Expiry Check</h3>
+    <ul>
+        <li>Ensure document is within validity (≈ 2 months)</li>
+        <li>Reject expired TICs</li>
+    </ul>
+    <h3>Step 3: ID Number Logic</h3>
+    <ul>
+        <li>Verify 13-digit format (YYMMDDSSSSCAZ)</li>
+        <li>Check gender range (0000–4999 / 5000–9999)</li>
+        <li>Validate checksum (Luhn algorithm)</li>
+    </ul>
+    <h3>Step 4: Barcode / Data Check</h3>
+    <ul>
+        <li>Scan barcode (if available)</li>
+        <li>Match encoded ID with printed number</li>
+    </ul>
+    <h3>Step 5: Database Verification</h3>
+    <ul>
+        <li>Verify via DHA or authorized services</li>
+        <li>Confirm ID exists and holder status is valid</li>
+    </ul>
+    <p><strong>Note:</strong> TICs are high-risk documents. Always escalate if uncertain.</p>
+</div>
+
+</section>
+
+<!-- FRAUD -->
+<section id="fraud" class="top-section fraud-section">
+    <div class="image-full">
+    <h3>Authentic vs Fake Comparison</h3>
+    <img src="images/id-comparison.jpg">
+</div>
+
+<h2>Common Fraud Methods</h2>
+
+<h3>1. Photo Substitution (Photo Swap)</h3>
+<p>Replacing the original photo with another person's image.</p>
+<ul>
+    <li>Common in Green ID Books</li>
+    <li>Often involves lifting laminate</li>
+</ul>
+
+<h3>2. Information Alteration</h3>
+<p>Changing personal details such as name, ID number, or date of birth.</p>
+<ul>
+    <li>Erasing or covering original text</li>
+    <li>Reprinting or overwriting details</li>
+</ul>
+
+<h3>3. Document Cloning</h3>
+<p>Creating a duplicate using stolen identity data.</p>
+<ul>
+    <li>Scanned and reprinted documents</li>
+    <li>Missing real security features</li>
+</ul>
+
+<h3>4. Chip Tampering</h3>
+<p>Altering or replacing microchips in smart documents.</p>
+<ul>
+    <li>Reprogrammed chips</li>
+    <li>Data mismatch with printed info</li>
+</ul>
+
+<h3>5. Identity Theft</h3>
+<p>Using another person's identity to create documents.</p>
+<ul>
+    <li>Stolen personal data</li>
+    <li>Used in financial fraud</li>
+</ul>
+
+<h3>6. Barcode Tampering</h3>
+<p>Replacing or modifying barcode data.</p>
+<ul>
+    <li>Fake barcode overlays</li>
+    <li>Mismatch with printed ID</li>
+</ul>
+
+<h3>7. Synthetic Identity Fraud</h3>
+<p>Combining real and fake information to create a new identity.</p>
+<ul>
+    <li>Real ID number + fake name</li>
+    <li>Passes basic checks</li>
+</ul>
+
+<h3>8. Identity Selling (Syndicates)</h3>
+<p>Real identities used by other individuals.</p>
+<ul>
+    <li>Often involves corruption</li>
+    <li>Biometric/photo mismatch</li>
+</ul>
+
+</section>
+
+<!-- DETECTION -->
+<section id="detection" class="top-section detection-section">
+
+<h2>Document Verification Techniques</h2>
+
+<h3>👁️ Visual Inspection</h3>
+<ul>
+    <li>Check overall appearance and color</li>
+    <li>Look for holograms and watermarks</li>
+    <li>Verify text clarity and alignment</li>
+    <li>Check photo quality and placement</li>
+    <li>Inspect microprinting</li>
+</ul>
+
+<h3>🔍 Physical Examination</h3>
+<ul>
+    <li>Feel material texture and weight</li>
+    <li>Check for tampering or glue marks</li>
+    <li>Inspect edges and corners</li>
+    <li>Look for raised or embossed elements</li>
+    <li>Check stitching and binding</li>
+</ul>
+
+<h3>💻 Electronic Verification</h3>
+<ul>
+    <li>Test chip functionality</li>
+    <li>Scan barcodes</li>
+    <li>Verify stored data</li>
+    <li>Check encryption/security</li>
+</ul>
+
+<h3>📋 Information Verification</h3>
+<ul>
+    <li>Cross-check with government databases</li>
+    <li>Validate ID number format</li>
+    <li>Check expiry dates</li>
+    <li>Confirm personal information</li>
+</ul>
+
+<h3>🧠 Logic Checks</h3>
+<div class="image-full">
+    <h3>ID Number Structure</h3>
+    <img src="images/id-number-breakdown.jpg">
+</div>
+<ul>
+    <li>Validate ID number using Luhn algorithm</li>
+    <li>Check gender digits (0000–4999 / 5000–9999)</li>
+    <li>Match age with appearance</li>
+    <li>Ensure data consistency across document</li>
+</ul>
+
+</section>
+
+<!-- RESPONSE -->
+<section id="response" class="top-section">
+
+<h2>What To Do If Fraud Is Suspected</h2>
+
+<ol>
+    <li>Do not return the document</li>
+    <li>Report to your supervisor immediately</li>
+    <li>Document all findings</li>
+    <li>Escalate internally</li>
+    <li>Contact authorities if required</li>
+</ol>
+
+<p>Report fraud to:</p>
+<ul>
+    <li>South African Police Service (SAPS)</li>
+    <li>Department of Home Affairs</li>
+</ul>
+
+</section>
+
+<!-- UPLOAD GUIDE -->
+<section id="upload-guide" class="top-section upload-section">
+
+<h2>📤 Submission Standards</h2>
+
+<p class="upload-intro">
+Before submitting an application, ensure the ID document and selfie meet all requirements below.
+Applications that do not meet these standards may be delayed, require corrections, or be rejected.
+</p>
+
+<div class="upload-grid">
+
+    <div class="upload-card-block warn-block">
+        <div class="upload-card-icon">🤳</div>
+        <h3>Customer Selfie</h3>
+
+        <ul>
+            <li>Customer must face the camera directly</li>
+            <li>Eyes must be open and visible</li>
+            <li>Image must be clear and in focus</li>
+            <li>Hairline and ears must be visible</li>
+            <li>Customer must be wearing appropriate clothing</li>
+            <li>Customer must be physically present in-store</li>
+            <li>Selfie must be taken live</li>
+        </ul>
+
+        <div class="upload-rule accept">
+            ✅ Acceptable if the customer's face clearly matches the ID document.
+        </div>
+    </div>
+
+    <div class="upload-card-block warn-block">
+        <div class="upload-card-icon">🪪</div>
+        <h3>ID Document</h3>
+
+        <ul>
+            <li>Entire document must be visible</li>
+            <li>No corners or pages may be cut off</li>
+            <li>All text must be readable</li>
+            <li>ID number must be clearly visible</li>
+            <li>No glare, reflections, or flash</li>
+            <li>No objects may cover the document</li>
+            <li>Image must be sharp and in focus</li>
+            <li>Document must be original and physically present</li>
+            <li>Document must not be expired</li>
+        </ul>
+
+        <div class="upload-rule accept">
+            ✅ Ensure all information can be read without zooming.
+        </div>
+    </div>
+
+    <div class="upload-card-block warn-block">
+        <div class="upload-card-icon">📄</div>
+        <h3>Accepted Documents</h3>
+
+        <ul>
+            <li>South African Smart ID Card</li>
+            <li>South African Green ID Book</li>
+            <li>Valid South African Temporary ID</li>
+        </ul>
+
+        <div class="upload-rule accept">
+            ❌ Do not submit driver's licences or foreign IDs.
+        </div>
+    </div>
+
+    <div class="upload-card-block warn-block">
+        <div class="upload-card-icon">⚠️</div>
+        <h3>Fraud Prevention Checks</h3>
+
+        <ul>
+            <li>Customer must match the ID photo</li>
+            <li>Document must appear genuine</li>
+            <li>Selfie must appear genuine</li>
+            <li>No screenshots or photos of photos</li>
+            <li>No edited, filtered, or altered images</li>
+            <li>Customer must meet minimum age requirements</li>
+        </ul>
+    </div>
+
+</div>
+
+  <!-- SUBMISSION CHECKLIST -->
+<div class="upload-reference">
+
+    <h3>✅ Pre-Submission Checklist</h3>
+
+    <table class="upload-table">
+        <thead>
+            <tr>
+                <th>Verification Check</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Customer is physically present in store</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Selfie taken live (not a photo of a photo or screen)</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Customer is facing the camera</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Eyes are open and clearly visible</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Hairline and ears are visible</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Selfie is clear and in focus</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Selfie matches the ID photo</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>ID document is original and physically present</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>ID image is clear and readable</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>No glare, flash, or reflections on the ID</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>No corners, pages, or information are cut off</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>ID number is clearly visible</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>No objects are covering any part of the document</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>ID document is not expired</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Customer meets minimum age requirements</td>
+                <td>☐</td>
+            </tr>
+
+            <tr>
+                <td>Approved South African ID document used</td>
+                <td>☐</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+</section>
+
+<footer>
+    SA Verification Training © 2026
+</footer>
+
+<div id="zoom-overlay">
+    <img id="zoomed-img">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
